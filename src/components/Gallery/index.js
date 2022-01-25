@@ -12,8 +12,12 @@ function Gallery() {
     <section>
       <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
       <p>{currentCategory.description}</p>
-      <div>
-        <img src={photo} />
+      <div className="flex-row">
+        <img
+          src={photo}
+          alt="Commercial Example"
+          className="img-thumbnail mx-1"
+        />
       </div>
     </section>
   );
