@@ -7,11 +7,14 @@ import About from "..";
 afterEach(cleanup);
 
 describe("About component", () => {
+  // baseline test
   it("renders", () => {
     render(<About />);
   });
+
+  // snapshot test
   it("matches snapshot DOM node structure", () => {
-      const { asFragment } = render(<About />);
-      expect(asFragment()).toMatchSnapshot();
+    const { asFragment } = render(<About />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
