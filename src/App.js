@@ -6,7 +6,7 @@ import About from "./components/About";
 function App() {
   const [categories] = useState([
     {
-      name: "commerical",
+      name: "commercial",
       description:
         "Photos of grocery stores, food trucks, and other commercial projects",
     },
@@ -34,7 +34,7 @@ function App() {
         currentCategory={currentCategory}
       ></Nav>
       <main>
-        <Gallery></Gallery>
+        <Gallery currentCategory={currentCategory}></Gallery>
         <About></About>
       </main>
     </div>
