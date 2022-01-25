@@ -20,6 +20,7 @@ describe('Gallery is rendering', () => {
     })
     it('renders title', () => {
         const { getByTestId } = render(<Gallery currentCategory={portrait} />);
+        // eslint-disable-next-line testing-library/prefer-screen-queries
         expect(getByTestId('h1tag')).toHaveTextContent('Portraits');
     })
 });
