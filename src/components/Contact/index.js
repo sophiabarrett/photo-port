@@ -41,7 +41,7 @@ function ContactForm() {
             type="text"
             name="name"
             defaultValue={formState.name}
-            onChange={handleChange}
+            onBlur={handleChange}
           />
         </div>
         <div>
@@ -50,7 +50,7 @@ function ContactForm() {
             type="email"
             name="email"
             defaultValue={formState.email}
-            onChange={handleChange}
+            onBlur={handleChange}
           />
         </div>
         <div>
@@ -59,9 +59,14 @@ function ContactForm() {
             name="message"
             rows="5"
             defaultValue={formState.message}
-            onChange={handleChange}
+            onBlur={handleChange}
           />
         </div>
+        {errMsg && (
+            <div>
+                <p className="error-text">{errMsg}</p>
+            </div>
+        )}
         <button type="submit">Submit</button>
       </form>
     </section>
