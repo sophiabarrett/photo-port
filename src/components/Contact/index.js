@@ -15,9 +15,15 @@ function ContactForm() {
     if (e.target.name === "email") {
       const isValid = validateEmail(e.target.value);
       isValid ? setErrMsg("") : setErrMsg("Your email address is invalid.");
+    } else {
+      e.target.value.length
+        ? setErrMsg("")
+        : setErrMsg(`${e.target.name} is required.`);
     }
 
-    setFormState({ ...formState, [e.target.name]: e.target.value });
+    if (!errMsg) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+    }
   }
 
   function handleSubmit(e) {
