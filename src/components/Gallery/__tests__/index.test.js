@@ -10,17 +10,17 @@ const portrait = {
 
 afterEach(cleanup);
 
-describe('Gallery is rendering', () => {
-    it('renders', () => {
-        render(<Gallery currentCategory={portrait} />);
-    })
-    it('matches snapshot', () => {
-        const { asFragment } = render(<Gallery currentCategory={portrait} />);
-        expect(asFragment()).toMatchSnapshot();
-    })
-    it('renders title', () => {
-        const { getByTestId } = render(<Gallery currentCategory={portrait} />);
-        // eslint-disable-next-line testing-library/prefer-screen-queries
-        expect(getByTestId('h1tag')).toHaveTextContent('Portraits');
-    })
+describe("Gallery is rendering", () => {
+  it("renders", () => {
+    render(<Gallery currentCategory={portrait} />);
+  });
+  it("matches snapshot", () => {
+    const { asFragment } = render(<Gallery currentCategory={portrait} />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+  it("renders title", () => {
+    const { getByTestId } = render(<Gallery currentCategory={portrait} />);
+    // eslint-disable-next-line testing-library/prefer-screen-queries
+    expect(getByTestId("h1tag")).toHaveTextContent("Portraits");
+  });
 });
