@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { validateEmail } from "../../utils/helpers";
 
 function ContactForm() {
   const [formState, setFormState] = useState({
@@ -7,13 +8,21 @@ function ContactForm() {
     message: "",
   });
 
+  const [errMsg, setErrMsg] = useState("");
+
   function handleChange(e) {
+    // validate email
+    if (e.target.name === "email") {
+      const isValid = validateEmail(e.target.value);
+      isValid ? setErrMsg("") : setErrMsg("Your email address is invalid.");
+    }
+
     setFormState({ ...formState, [e.target.name]: e.target.value });
   }
 
   function handleSubmit(e) {
-      e.preventDefault();
-      console.log(formState);
+    e.preventDefault();
+    console.log(formState);
   }
 
   return (
