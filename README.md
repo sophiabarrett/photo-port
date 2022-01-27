@@ -8,7 +8,7 @@ Single-Page React App that displays a photography portfolio.
 ![screenshot of app](./screenshot.png)
 
 ## Link to Deployed App
-Visit the live app at []()
+Visit the live app at [sophiabarrett.github.io/photo-port](http://sophiabarrett.github.io/photo-port)
 
 # Tools Used
 
