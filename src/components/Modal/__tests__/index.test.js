@@ -33,6 +33,7 @@ describe("click event", () => {
     const { getByText } = render(
       <Modal currentPhoto={currentPhoto} onClose={mockToggleModal} />
     );
+    // eslint-disable-next-line testing-library/prefer-screen-queries
     fireEvent.click(getByText('Close this modal'));
 
     expect(mockToggleModal).toHaveBeenCalledTimes(1);
